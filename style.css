@@ -1,0 +1,53 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body, html {
+    height: 100%;
+    font-family: 'Arial', sans-serif;
+    background-color: #f1f1f1;
+}
+
+.container {
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    overflow: hidden;
+}
+
+.animation {
+    text-align: center;
+    position: relative;
+}
+
+.rain {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.1);
+    pointer-events: none;
+    z-index: 1;
+    animation: rain 1s linear infinite;
+}
+
+.letter {
+    font-size: 1.5rem;
+    z-index: 2;
+    color: #333;
+    font-weight: bold;
+}
+
+@keyframes rain {
+    0% {
+        top: -10%;
+    }
+    100% {
+        top: 100%;
+    }
+}
